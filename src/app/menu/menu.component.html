@@ -1,0 +1,9 @@
+<mat-selection-list #foodItem>
+  {{Map()}}
+  <mat-list-option *ngFor="let foodItem in foodList">
+    {{foodItem.categoria}}
+    <!-- <div *ngFor="let food in foodItem.categoria">
+      {{foodItem.descricao}}
+    </div> -->
+  </mat-list-option>
+</mat-selection-list>

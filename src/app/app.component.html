@@ -1,0 +1,18 @@
+<div class="mat-typography mat-app-background"> 
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Cardápio</span>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <span class="example-spacer"></span>
+      <button mat-button (click)="onGoToOrderList"> Ver pedido </button>
+      <span class="example-spacer"></span>
+      <span> R$00,00</span>
+    </mat-toolbar-row>
+  </mat-toolbar> 
+  <router-outlet></router-outlet>
+</div>
