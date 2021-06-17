@@ -1,17 +1,16 @@
-<form action="">
-  <mat-selection-list #shoes>
-    <mat-list-option *ngFor="let shoe of typesOfShoes">
-      <span> 
-        {{shoe}}
-      </span>
-      <span>
-        R$60,90
-      </span>
-    </mat-list-option>    
-  </mat-selection-list>
-  <section>
-    <button mat-button routerLink="/menu">Incluir mais itens</button>
-    <button mat-button >Limpar</button>
-    <button mat-button color="primary" type="submit" [disabled]="shoes.selectedOptions.selected.length === 0">Concluir</button>
-  </section>
-</form>
+<mat-selection-list #shoes>
+  olá {{item}}
+  <mat-list-option *ngFor="let shoe of typesOfShoes">
+    <span> 
+      {{shoe}}
+    </span>
+    <span>
+      R$60,90
+    </span>
+  </mat-list-option>    
+</mat-selection-list>
+<section>
+  <button mat-button routerLink="/menu">Incluir mais itens</button>
+  <button mat-button >Limpar</button>
+  <button mat-button color="primary" type="submit" [disabled]="shoes.selectedOptions.selected.length === 0">Concluir</button>
+</section>

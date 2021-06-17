@@ -1,9 +1,15 @@
-<mat-selection-list #foodItem>
-  {{Map()}}
-  <mat-list-option *ngFor="let foodItem in foodList">
-    {{foodItem.categoria}}
-    <!-- <div *ngFor="let food in foodItem.categoria">
-      {{foodItem.descricao}}
-    </div> -->
+<header>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+  <button mat-button (click)="onGoToOrderList(selectedFood)"> Ver pedido </button>
+  <span class="example-spacer"></span>
+  <span> R$00,00</span>
+</header>
+
+<mat-selection-list #foodItem [(ngModel)]="selectedFood">
+  <mat-list-option *ngFor="let foodItem of foodList" [value]="foodItem">
+        {{foodItem.categoria}}
   </mat-list-option>
 </mat-selection-list>

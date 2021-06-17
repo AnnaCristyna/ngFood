@@ -1,5 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
+// import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'order-check',
@@ -11,13 +12,15 @@ export class OrderCheckComponent implements OnInit {
   // OrderCheckForm = new FormGroup({
   //   canSubmit: new FormControl(shoes.selectedOptions.selected.length === 0, Validators.required)
   // });
+  item;
 
-  constructor() { }
+  constructor(private router: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.router.queryParams.subscribe(item =>  {
+      console.log(item);
+      this.item = { ...item};
+    })
   }
-  // @Output() hasFoodSelected = shoes.selectedOptions.selected.length === 0
-
   typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
-  
 }

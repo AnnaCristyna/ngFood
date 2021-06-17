@@ -11,7 +11,4 @@ export class AppComponent {
 
   constructor(private router: Router) { }
 
-  onGoToOrderList() {
-    this.router.navigate(['/check'])
-  }
 }
